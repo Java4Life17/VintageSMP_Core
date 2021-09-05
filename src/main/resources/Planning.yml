@@ -1,0 +1,18 @@
+1. A system that will decode Base64 Items with display information and Raw item method.
+2. For every player file, the items selling will turned into a Base64 Item from ^^^^
+3. Put those items into an inventory with flippable pages.
+
+Items:
+  'a4at4f':
+    Base64: "asa5sd4f65a4s654as654df65as4df65as4td6ga4s65df465asd4f65sa4y65asdfa=="
+    Price: 156
+    Expiration_Date: 8/28/2021 12:21
+    Expired: true
+
+
+MyPlugin.Subastas.SellLimit.<Number of limit to sell>;
+
+MyPlugin.Subastas.SellLimit.50
+
+  DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+  LocalDateTime now = LocalDateTime.now();

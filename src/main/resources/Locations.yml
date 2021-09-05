@@ -1,0 +1,11 @@
+Example:
+  X: 101.12345
+  Y: 456.4564
+  Z: 789.7897
+  Yaw: 456.321
+  Pitch: 753.357
+  Messages:
+    - "This is the first line"
+    - "This is the second line"
+    - "This is the third line"
+  Sound: BLOCK_BEEHIVE_ENTER

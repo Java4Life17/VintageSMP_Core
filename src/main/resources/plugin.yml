@@ -1,0 +1,47 @@
+name: MyPlugin
+version: ${project.version}
+main: myplugin.myplugin.MyPlugin
+api-version: 1.17
+authors: [ Mr_CodingBob, JavaZymic, Nvme_SSD, proxytimeout ]
+description: This is a personal plugin I made for my own server
+commands:
+  monedas:
+    description: Manejar las monedas del servidor
+    aliases:
+      - coins
+      - bal
+  Subastas:
+    description: Command to manage the auction system
+    aliases:
+      - sub
+      - ah
+      - auctions
+  takePlayerToDistrict:
+    description: Take a player to a district
+    aliases: tptd
+  districtEdit:
+    description: Command to open the editor
+    aliases:
+      - disedit
+      - dse
+  corazones:
+    description: Command to manage player's hearts
+    aliases:
+      - coras
+      - crz
+permissions:
+  MyPlugin.DistricEditor:
+    description: Permission to access the district editor
+    default: op
+  LivesSystem.SetHearts:
+    description: Set hearts for a palyer
+    default: op
+  MyPlugin.Coins.Remove:
+    description: Remove a player coins.
+    default: op
+  MyPlugin.Coins.Give:
+    description: Give a player coins
+    default: op
+  MyPlugin.Coins.Set:
+    description: Set a players coins
+    default: op
