@@ -14,7 +14,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.simpleyaml.configuration.file.YamlFile;
 
 import java.io.IOException;
-import java.net.http.WebSocket;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -29,15 +28,19 @@ public class Player_Settings_Listener implements Listener {
             Player player = (Player) event.getWhoClicked();
 
             List<Integer> pane_Slots = Arrays.asList(0, 1, 2, 3, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53);
-            if(pane_Slots.contains(event.getSlot())){
+            if(pane_Slots.contains(event.getRawSlot())){
                 return;
             }
-            if(event.getSlot() == 4){
+            if(event.getRawSlot() == 4){
                 int coins_earned = 0;
 
                 YamlFile yamlFile = new YamlFile("plugins/MyPlugin/SellingSystem/" + player.getName() + ".yml");
                 try {
-                    yamlFile.load();
+                    if (MyPlugin.system.getByName(player.getName()) != null) {
+                        yamlFile = MyPlugin.system.getByName(player.getName()).getFile();
+                    } else {
+                        yamlFile.load();
+                    }
                     coins_earned = yamlFile.getInt("Ganancia");
 
                     if(coins_earned == 0){
@@ -76,10 +79,15 @@ public class Player_Settings_Listener implements Listener {
 
             YamlFile yamlFile = new YamlFile("plugins/MyPlugin/SellingSystem/" + player.getName() + ".yml");
 
+
+
             try {
 
-                yamlFile.load();
-
+                if (MyPlugin.system.getByName(player.getName()) != null) {
+                    yamlFile = MyPlugin.system.getByName(player.getName()).getFile();
+                } else {
+                    yamlFile.load();
+                }
                 if(!yamlFile.getConfigurationSection("Items").contains(key)){
                     player.sendMessage(Tools.langText("Item_Already_Sold"));
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.4F);
@@ -106,6 +114,7 @@ public class Player_Settings_Listener implements Listener {
 
             if(!emptySlot){
                 player.sendMessage(Tools.langText("No_Empty_Slot"));
+                player.closeInventory();
                 return;
             }
 

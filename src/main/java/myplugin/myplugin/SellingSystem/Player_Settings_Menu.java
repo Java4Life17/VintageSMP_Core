@@ -1,5 +1,6 @@
 package myplugin.myplugin.SellingSystem;
 
+import myplugin.myplugin.MyPlugin;
 import myplugin.myplugin.Tools;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -26,7 +27,11 @@ public class Player_Settings_Menu {
         YamlFile file = new YamlFile("plugins/MyPlugin/SellingSystem/" + playerName + ".yml");
         int ganancia = 0;
         try {
-            file.load();
+            if (MyPlugin.system.getByName(playerName) != null) {
+                file = MyPlugin.system.getByName(playerName).getFile();
+            } else {
+                file.load();
+            }
             ganancia = file.getInt("Ganancia");
             inventory.setItem(4, getGananciaItem(playerName, ganancia));
 

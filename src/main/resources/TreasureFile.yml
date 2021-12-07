@@ -1,0 +1,10 @@
+kJ8352sjw9qlvts:
+  Item: 'Nothing'
+  Commands:
+    - 'say This works'
+    - 'This works too'
+  Messages:
+    - 'Yay! You won the price!!!'
+  Min: 1
+  Max: 4
+  Weight: 10

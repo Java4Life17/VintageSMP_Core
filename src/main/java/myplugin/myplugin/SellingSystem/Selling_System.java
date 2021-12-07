@@ -71,6 +71,11 @@ public class Selling_System {
             }
             String userName = file.getName();
             userName = userName.replace(".yml", "");
+
+            if(!yamlFile.contains("Items")){
+                yamlFile.createSection("Items");
+            }
+
             if (yamlFile.getConfigurationSection("Items").getKeys(false).size() != 0 || yamlFile.contains("Items")) {
                 for (String key : yamlFile.getConfigurationSection("Items").getKeys(false)) {
 
@@ -80,7 +85,7 @@ public class Selling_System {
                     String toCompare = LocalDateTime.now().format(formatter);
                     LocalDateTime now = LocalDateTime.parse(toCompare, formatter);
 
-                    if(now.isAfter(dateTime)){
+                    if (now.isAfter(dateTime)) {
                         yamlFile.set("Items." + key + ".Expired", true);
                         yamlFile.save();
                     }
@@ -94,8 +99,6 @@ public class Selling_System {
                 }
             }
         }
-
-
     }
 
 

@@ -69,9 +69,7 @@ public class Selling_Item {
         }
     }
 
-    public void deleteSellingItem(){
-
-        YamlFile yamlFile = new YamlFile("plugins/MyPlugin/SellingSystem/" + getSeller_Name() + ".yml");
+    public void deleteSellingItem(YamlFile yamlFile){
 
         try {
             yamlFile.load();

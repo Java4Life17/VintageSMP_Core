@@ -4,12 +4,25 @@ main: myplugin.myplugin.MyPlugin
 api-version: 1.17
 authors: [ Mr_CodingBob, JavaZymic, Nvme_SSD, proxytimeout ]
 description: This is a personal plugin I made for my own server
+depend:
+  - Citizens
 commands:
+  guerra:
+    description: Test
+  clans:
+    description: Manejar comandos de clanes.
+  pet:
+    description: Manejar tu mascota.
+    aliases:
+      - mascota
+      - pets
   monedas:
     description: Manejar las monedas del servidor
     aliases:
       - coins
       - bal
+  clanEditor:
+    description: Edita las ubicaciones de los clanes
   Subastas:
     description: Command to manage the auction system
     aliases:
@@ -24,11 +37,50 @@ commands:
     aliases:
       - disedit
       - dse
+  automessage:
+    description: restart the automatic message system
   corazones:
     description: Command to manage player's hearts
     aliases:
       - coras
       - crz
+  tprequest:
+    description: Request to teleport to a player
+    aliases:
+      - tpa
+      - tpask
+  petStorages:
+    description: Command to check player's pet storages
+    aliases:
+      - ps
+      - petchests
+  treasureRewards:
+    description: Edit pet storage
+    aliases:
+      - pr
+      - petreward
+  conversation:
+    description: Send a palyer a conversation
+  openCM:
+    description: Open the Clan Tools Menu.
+  tpaccept:
+    description: Accept the teleportation request.
+  discordCheater:
+    description: Describe a hacker on discord
+  custodian:
+    description: Restart the system
+  SellPlayerItem:
+    description: Command for console to sell Items to the server
+  setPrice:
+    description: Command to set price to items.
+  discord:
+    description: Verifica tu cuenta de discord.
+  opItem:
+    description: Obtener Custom Items.
+  mwhitelist:
+    description: Manage Whitelist
+  back:
+    description: Go back to the location where you lastly died.
 permissions:
   MyPlugin.DistricEditor:
     description: Permission to access the district editor
@@ -44,4 +96,49 @@ permissions:
     default: op
   MyPlugin.Coins.Set:
     description: Set a players coins
+    default: op
+  MyPlugin.Selling.SetValue:
+    description: Set a price to an item
+    default: op
+  MyPlugin.PetTier.1:
+    description: Permission for pet tier 1.
+    default: op
+  MyPlugin.PetTier.2:
+    description: Permission for pet tier 2.
+    default: op
+  MyPlugin.PetTier.3:
+    description: Permission for pet tier 3.
+    default: op
+  MyPlugin.PetTier.4:
+    description: Permission for pet tier 4.
+    default: op
+  AdditionalStorage.1:
+    description: Permission for Additional Storage 1.
+    default: op
+  AdditionalStorage.2:
+    description: Permission for Additional Storage 2.
+    default: op
+  AdditionalStorage.3:
+    description: Permission for Additional Storage 3.
+    default: op
+  AdditionalStorage.4:
+    description: Permission for Additional Storage 4.
+    default: op
+  AdditionalStorage.5:
+    description: Permission for Additional Storage 5.
+    default: op
+  MyPlugin.OpItems:
+    description: Permission to get any custom item.
+    default: op
+  VintageSMP.Whitelist:
+    description: Permission to turn on/off whitelist.
+  Pet.RainbowName:
+    description: Permission to make your pet have a rainbow name.
+  MyPlugin.PetStorages:
+    description: Permission to check player's pet storages.
+  MyPlugin.TreasureRewards:
+    description: Permission to edit treasure rewards
+    default: op
+  automessage.reload:
+    description: Restart the automatic message system
     default: op

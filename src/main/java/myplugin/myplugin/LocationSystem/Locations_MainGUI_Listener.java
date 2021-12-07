@@ -2,6 +2,9 @@ package myplugin.myplugin.LocationSystem;
 
 import myplugin.myplugin.MyPlugin;
 import myplugin.myplugin.Tools;
+import net.citizensnpcs.api.CitizensAPI;
+import net.citizensnpcs.api.event.CitizensEnableEvent;
+import net.citizensnpcs.api.npc.MemoryNPCDataStore;
 import net.wesjd.anvilgui.AnvilGUI;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -17,6 +20,7 @@ public class Locations_MainGUI_Listener implements Listener {
     public Locations_MainGUI_Listener(MyPlugin plugin) {
         this.plugin = plugin;
     }
+
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
@@ -40,7 +44,6 @@ public class Locations_MainGUI_Listener implements Listener {
             }
 
             if (event.getSlot() == 13) {
-
                 new AnvilGUI.Builder()
                         .onComplete((user, text) -> {                                    //called when the inventory output slot is clicked
                             if (!MyPlugin.locations.locationsFile.contains(text)) {

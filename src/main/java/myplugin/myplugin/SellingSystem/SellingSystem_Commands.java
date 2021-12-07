@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 import org.simpleyaml.configuration.file.YamlFile;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SellingSystem_Commands implements CommandExecutor {
@@ -22,6 +23,10 @@ public class SellingSystem_Commands implements CommandExecutor {
 
             Player player = (Player) sender;
             try {
+                if (!MyPlugin.languageFile.exists()) {
+                    MyPlugin.getMyPlugin().saveResource("Lang.yml", true);
+                }
+                MyPlugin.languageFile.load();
 
                 if (args.length == 0) {
                     if (MyPlugin.selling_system.pages.get(1) == null) {
@@ -36,15 +41,6 @@ public class SellingSystem_Commands implements CommandExecutor {
                 }
 
                 if (args[0].equalsIgnoreCase("sell")) {
-
-                    if(player.getInventory().getItemInMainHand().equals(Tools.getStaticItem())){
-                        player.sendMessage(Tools.langText("Cannot_Sell_Menu"));
-
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.4F);
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.4F);
-                        return false;
-                    }
-
                     if (player.getInventory().getItemInMainHand() == null || player.getInventory().getItemInMainHand().getType().equals(Material.AIR)
                             || player.getInventory().getItemInMainHand().getType().equals(Material.VOID_AIR)) {
                         player.sendMessage(Tools.langText("Cannot_Sell_Air"));
@@ -54,11 +50,19 @@ public class SellingSystem_Commands implements CommandExecutor {
 
                     int price = Integer.parseInt(args[1]);
                     YamlFile playerFile = new YamlFile("plugins/MyPlugin/SellingSystem/" + player.getName() + ".yml");
-                    playerFile.load();
+                    if (MyPlugin.system.getByName(player.getName()) != null) {
+                        playerFile = MyPlugin.system.getByName(player.getName()).getFile();
+                    } else {
+                        playerFile.load();
+                    }
 
+                    List<String> keys;
 
-                    List<String> keys = playerFile.getConfigurationSection("Items").getKeys(false).stream().toList();
-
+                    if(playerFile.getConfigurationSection("Items").getKeys(false) == null) {
+                        keys = playerFile.getConfigurationSection("Items").getKeys(false).stream().toList();
+                    }else{
+                        keys = new ArrayList<>();
+                    }
                     String key = Tools.getAlphaNumericString(6);
 
                     while (keys.contains(key)) {
@@ -172,6 +176,10 @@ public class SellingSystem_Commands implements CommandExecutor {
                     message = message.replace("%receiver%", toAdd.getName());
                     player.sendMessage(message);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BIT, 100, 1.4F);
+                } else if (args[0].equalsIgnoreCase("reload")) {
+                    MyPlugin.locations.locationsFile.load();
+                    Tools.reloadLangFile();
+                    player.sendMessage(Tools.colorMSG("DONE"));
                 }
 
 
@@ -185,6 +193,7 @@ public class SellingSystem_Commands implements CommandExecutor {
                 player.sendMessage(Tools.colorMSG("&4&l/monedas &agive <player> <cantidad> &b- &7&oAgregar monedas a un jugador."));
                 player.sendMessage(Tools.colorMSG("&4&l/monedas &aremove <player> <cantidad> &b- &7&oQuitar monedas a un jugador."));
                 player.sendMessage(Tools.colorMSG("&4&l/monedas &aset <player> <cantidad> &b- &7&oEstablecer las monedas de un jugador."));
+                player.sendMessage(Tools.colorMSG("&4&l/monedas &areload &b- &7&oRecarga los archivos de este plugin."));
                 player.sendMessage(" ");
                 player.sendMessage(Tools.colorMSG("&e-------------------------------------------------"));
 

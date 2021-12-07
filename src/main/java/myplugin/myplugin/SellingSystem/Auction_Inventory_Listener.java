@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryDragEvent;
+import org.bukkit.event.inventory.InventoryMoveItemEvent;
 import org.simpleyaml.configuration.file.YamlFile;
 
 import java.io.IOException;
@@ -76,10 +78,30 @@ public class Auction_Inventory_Listener implements Listener {
                 return;
             }
 
+            boolean emptySlot = false;
+
+            for (int i = 0; i < 36; i++) {
+                if (player.getInventory().getItem(i) == null || Objects.equals(Objects.requireNonNull(player.getInventory().getItem(i)).getType(), Material.AIR) ||
+                        Objects.equals(Objects.requireNonNull(player.getInventory().getItem(i)).getType(), Material.VOID_AIR)) {
+                    emptySlot = true;
+                }
+            }
+
+            if (!emptySlot) {
+                player.sendMessage(Tools.langText("No_Empty_Slot"));
+                player.closeInventory();
+                return;
+            }
+
             YamlFile yamlFile = new YamlFile("plugins/MyPlugin/SellingSystem/" + selling.getSeller_Name() + ".yml");
 
+
             try {
-                yamlFile.load();
+                if (MyPlugin.system.getByName(selling.getSeller_Name()) != null) {
+                    yamlFile = MyPlugin.system.getByName(selling.getSeller_Name()).getFile();
+                } else {
+                    yamlFile.load();
+                }
                 if (!yamlFile.getConfigurationSection("Items").contains(selling.getItem_ID())) {
                     player.sendMessage(Tools.langText("Item_Already_Sold"));
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 100, 0.4F);
@@ -98,7 +120,7 @@ public class Auction_Inventory_Listener implements Listener {
             player.getInventory().addItem(selling.getRawItem());
             Tools.removePlayerCoins(player, price);
             Tools.addSoldPlayerCoins(selling.getSeller_Name(), price);
-            selling.deleteSellingItem();
+            selling.deleteSellingItem(yamlFile);
             MyPlugin.selling_system.setUpSells();
             player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 100, 0.4F);
             player.closeInventory();
@@ -106,6 +128,12 @@ public class Auction_Inventory_Listener implements Listener {
             player.sendMessage(Tools.langText("Item_Purchased"));
 
 
+        }
+        else if(event.getView().getTitle().startsWith( Tools.colorMSG("&dMenu Espia de &4"))){
+            Player player = (Player) event.getWhoClicked();
+            if(!player.hasPermission("Inventario.Modificar")){
+                event.setCancelled(true);
+            }
         }
     }
 

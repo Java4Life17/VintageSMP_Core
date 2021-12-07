@@ -1,0 +1,338 @@
+Items: {}
+Coins: 100
+Pet_Items:
+  ZqCbHc:
+    Damage: 0
+    Type: SADDLE
+  g73U6g:
+    Damage: 408
+    Type: DIAMOND_SHOVEL
+  cEzl9h:
+    Damage: 0
+    Type: LEAD
+  omlu1f:
+    Damage: 0
+    Type: SLIME_BALL
+  mUOtQO:
+    Damage: 0
+    Type: ENDER_CHEST
+  L7Iln9:
+    Damage: 1126
+    Type: DIAMOND_SHOVEL
+  W79Vzv:
+    Damage: 60
+    Type: FISHING_ROD
+  FdTkkA:
+    Damage: 166
+    Type: IRON_BOOTS
+  VEfRIX:
+    Damage: 83
+    Type: DIAMOND_BOOTS
+  fFy5ee:
+    Damage: 0
+    Type: COOKED_RABBIT
+  GRsSXM:
+    Damage: 0
+    Type: DRAGON_HEAD
+  paqpZu:
+    Damage: 1355
+    Type: DIAMOND_SHOVEL
+  GHn2IR:
+    Damage: 0
+    Type: WHEAT_SEEDS
+  ggRVtn:
+    Damage: 58
+    Type: IRON_LEGGINGS
+  QHbmnh:
+    Damage: 0
+    Type: NETHERITE_INGOT
+  uHpz3n:
+    Damage: 787
+    Type: DIAMOND_SHOVEL
+  JkxljT:
+    Damage: 0
+    Type: LEAD
+  Pt8iEL:
+    Damage: 0
+    Type: SHULKER_SHELL
+  mh2E8h:
+    Damage: 0
+    Type: END_CRYSTAL
+  OjiZYI:
+    Damage: 0
+    Type: NAME_TAG
+  LXOuDm:
+    Damage: 0
+    Type: BAKED_POTATO
+  c1HxyI:
+    Damage: 154
+    Type: DIAMOND_SHOVEL
+  1xY8vc:
+    Damage: 0
+    Type: COAL
+  mTL1jj:
+    Damage: 167
+    Type: IRON_AXE
+  Ph4Qsg:
+    Damage: 33
+    Type: DIAMOND_CHESTPLATE
+  d1yeKk:
+    Damage: 190
+    Type: DIAMOND_LEGGINGS
+  gkWo16:
+    Damage: 19
+    Type: IRON_CHESTPLATE
+  q557tD:
+    Damage: 583
+    Type: DIAMOND_SWORD
+  AHGiHc:
+    Damage: 1555
+    Type: DIAMOND_SWORD
+  yl5b9F:
+    Damage: 0
+    Type: HEART_OF_THE_SEA
+  NDHzLG:
+    Damage: 0
+    Type: EMERALD
+  7xFTuD:
+    Damage: 0
+    Type: ENCHANTED_GOLDEN_APPLE
+  r8tIx2:
+    Damage: 0
+    Type: CHEST
+  sQQy1o:
+    Damage: 0
+    Type: COOKED_RABBIT
+  xJHrEr:
+    Damage: 0
+    Type: EMERALD
+  tYQoLS:
+    Damage: 0
+    Type: EMERALD
+  d9lnTL:
+    Damage: 281
+    Type: DIAMOND_SHOVEL
+  0TfTge:
+    Damage: 0
+    Type: COOKED_RABBIT
+  4WbclB:
+    Damage: 378
+    Type: DIAMOND_BOOTS
+  hCKtaA:
+    Damage: 0
+    Type: NAME_TAG
+  xG04fb:
+    Damage: 15
+    Type: IRON_BOOTS
+  1pY40Q:
+    Damage: 0
+    Type: EMERALD
+  zgCJaS:
+    Damage: 21
+    Type: FLINT_AND_STEEL
+  rnD6Rv:
+    Damage: 37
+    Type: DIAMOND_BOOTS
+  ebD9Oz:
+    Damage: 0
+    Type: WHEAT_SEEDS
+  R37CJY:
+    Damage: 894
+    Type: DIAMOND_PICKAXE
+  lcqvbq:
+    Damage: 0
+    Type: TURTLE_EGG
+  PYnoNe:
+    Damage: 452
+    Type: DIAMOND_CHESTPLATE
+  h4miTD:
+    Damage: 0
+    Type: STRING
+  yMkhWQ:
+    Damage: 0
+    Type: HEART_OF_THE_SEA
+  PQiC7X:
+    Damage: 0
+    Type: ENDER_PEARL
+  5RtYJH:
+    Damage: 59
+    Type: STONE_HOE
+  tkQ0SD:
+    Damage: 23
+    Type: GOLDEN_PICKAXE
+  cQ8t9t:
+    Damage: 0
+    Type: NETHERITE_INGOT
+  C3GBtT:
+    Damage: 22
+    Type: STONE_SWORD
+  HMbqkk:
+    Damage: 1
+    Type: GOLDEN_PICKAXE
+  SUaEvH:
+    Damage: 0
+    Type: DIAMOND
+  eLu3Tz:
+    Damage: 164
+    Type: DIAMOND_HELMET
+  i9Mcgb:
+    Damage: 34
+    Type: FLINT_AND_STEEL
+  f9obj4:
+    Damage: 457
+    Type: DIAMOND_LEGGINGS
+  Tkhvcr:
+    Damage: 1440
+    Type: DIAMOND_SHOVEL
+  qxUYMo:
+    Damage: 0
+    Type: WHEAT_SEEDS
+  FS8Uzt:
+    Damage: 0
+    Type: COOKED_PORKCHOP
+  sxBkB0:
+    Damage: 1191
+    Type: DIAMOND_PICKAXE
+  pnz6Ke:
+    Damage: 0
+    Type: END_CRYSTAL
+  LJ8Fzg:
+    Damage: 0
+    Type: END_CRYSTAL
+  Ynymog:
+    Damage: 75
+    Type: DIAMOND_SHOVEL
+  7z6nPr:
+    Damage: 0
+    Type: NAME_TAG
+  WfvMTh:
+    Damage: 0
+    Type: SADDLE
+  JUbcri:
+    Damage: 0
+    Type: ENDER_CHEST
+  v4XJge:
+    Damage: 0
+    Type: EMERALD
+  ahyWbi:
+    Damage: 1465
+    Type: DIAMOND_SWORD
+  d4Hz8f:
+    Damage: 0
+    Type: POPPY
+  99vWBa:
+    Damage: 0
+    Type: HEART_OF_THE_SEA
+  4IvNdP:
+    Damage: 201
+    Type: DIAMOND_PICKAXE
+  vkOkAI:
+    Damage: 0
+    Type: SLIME_BALL
+  JVprfZ:
+    Damage: 0
+    Type: ENCHANTED_GOLDEN_APPLE
+  M6xJNv:
+    Damage: 0
+    Type: WHEAT_SEEDS
+  FvBzrO:
+    Damage: 84
+    Type: IRON_CHESTPLATE
+  ypQ6pD:
+    Damage: 718
+    Type: DIAMOND_PICKAXE
+  vUK9Ta:
+    Damage: 10
+    Type: FISHING_ROD
+  KW8Uk6:
+    Damage: 55
+    Type: IRON_CHESTPLATE
+  BgEJid:
+    Damage: 553
+    Type: DIAMOND_SHOVEL
+  IoXe37:
+    Damage: 0
+    Type: DIAMOND
+  WXUv9C:
+    Damage: 0
+    Type: CAKE
+  MCv8ql:
+    Damage: 34
+    Type: DIAMOND_LEGGINGS
+  OcY3T3:
+    Damage: 399
+    Type: DIAMOND_PICKAXE
+  D3m5t6:
+    Damage: 0
+    Type: HEART_OF_THE_SEA
+  aEWJI9:
+    Damage: 384
+    Type: DIAMOND_CHESTPLATE
+  bXvtW4:
+    Damage: 70
+    Type: STONE_SWORD
+  9MhGS3:
+    Damage: 0
+    Type: SADDLE
+  XqBCJM:
+    Damage: 0
+    Type: NETHERITE_INGOT
+  dRzip9:
+    Damage: 0
+    Type: SHULKER_BOX
+  Mug9UH:
+    Damage: 13
+    Type: GOLDEN_PICKAXE
+  XO8cJO:
+    Damage: 0
+    Type: ENCHANTED_GOLDEN_APPLE
+  RW7OqQ:
+    Damage: 135
+    Type: IRON_BOOTS
+  3RbAlW:
+    Damage: 1166
+    Type: DIAMOND_SHOVEL
+  8P5dPo:
+    Damage: 41
+    Type: DIAMOND_HELMET
+  tEtbxB:
+    Damage: 0
+    Type: CHEST
+  MIqeZz:
+    Damage: 0
+    Type: SADDLE
+  X6iA43:
+    Damage: 628
+    Type: DIAMOND_SHOVEL
+  bm3W0O:
+    Damage: 0
+    Type: WHEAT_SEEDS
+  tn5ctJ:
+    Damage: 0
+    Type: SADDLE
+  r5X6Qi:
+    Damage: 201
+    Type: TRIDENT
+  YEXSPe:
+    Damage: 0
+    Type: EMERALD
+  Qa1lfg:
+    Damage: 0
+    Type: BAKED_POTATO
+  JryexZ:
+    Damage: 1178
+    Type: DIAMOND_SHOVEL
+  yjCiKZ:
+    Damage: 0
+    Type: LEAD
+  BOOCuP:
+    Damage: 130
+    Type: IRON_PICKAXE
+  QkE9br:
+    Damage: 0
+    Type: DRAGON_HEAD
+  o6Xkti:
+    Damage: 259
+    Type: DIAMOND_CHESTPLATE
+Offline: false
+TimeLeft: 50

@@ -22,8 +22,39 @@ public class SellingSystem_Events implements Listener {
                 file.createNewFile(true);
                 file.createSection("Items");
                 file.set("Coins", 100);
+                file.createSection("Pet_Items");
+                int timeLeft = 0;
+                if (player.hasPermission("MyPlugin.PetTier.2")) {
+                    timeLeft = 0;
+                }
+                if (player.hasPermission("MyPlugin.PetTier.3")) {
+                    timeLeft = 90;
+                }
+                if (player.hasPermission("MyPlugin.PetTier.4")) {
+                    timeLeft = 140;
+                }
+                file.set("TimeLeft", timeLeft);
+                file.set("Offline", false);
                 file.save();
             }
+
+            file.load();
+
+            if(!file.contains("TimeLeft")){
+                int timeLeft = 0;
+                if (player.hasPermission("MyPlugin.PetTier.2")) {
+                    timeLeft = 0;
+                }
+                if (player.hasPermission("MyPlugin.PetTier.3")) {
+                    timeLeft = 90;
+                }
+                if (player.hasPermission("MyPlugin.PetTier.4")) {
+                    timeLeft = 140;
+                }
+                file.set("TimeLeft", timeLeft);
+                file.save();
+            }
+
             file.load();
         } catch (Exception e) {
             e.printStackTrace();
