@@ -5,6 +5,7 @@ api-version: 1.17
 authors: [ Mr_CodingBob, JavaZymic, Nvme_SSD, proxytimeout ]
 description: This is a personal plugin I made for my own server
 depend:
+  - UltraPermissions
   - Citizens
 commands:
   guerra:

@@ -56,10 +56,6 @@
 
     <repositories>
         <repository>
-            <id>everything</id>
-            <url>http://repo.citizensnpcs.co/</url>
-        </repository>
-        <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
@@ -88,6 +84,10 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>everything</id>
+            <url>https://repo.citizensnpcs.co/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -103,11 +103,11 @@
             <version>1.7.2</version>
         </dependency>
         <dependency>
-        <groupId>dev.dbassett</groupId>
-        <artifactId>skullcreator</artifactId>
-        <version>3.0.1</version>
-        <scope>compile</scope>
-    </dependency>
+            <groupId>dev.dbassett</groupId>
+            <artifactId>skullcreator</artifactId>
+            <version>3.0.1</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
@@ -136,7 +136,7 @@
             <artifactId>UltraPermissions</artifactId>
             <version>5.1.4</version>
             <scope>system</scope>
-            <systemPath>C:/Users/Shadow/Desktop/Second Server/plugins/UltraPermissions.jar</systemPath>
+            <systemPath>C:/Users/juand/Desktop/Second Server/plugins/UltraPermissions.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

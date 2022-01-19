@@ -6,13 +6,8 @@ import me.TechsCode.UltraPermissions.storage.objects.User;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.event.block.BlockRedstoneEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.Locale;
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class SpigotExpansion extends PlaceholderExpansion {
     @Override
